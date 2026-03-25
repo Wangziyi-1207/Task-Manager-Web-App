@@ -13,7 +13,6 @@ router.post('/register', async (req, res) => {
         res.sendStatus(200);
     });
 });
-
 router.post('/login', (req, res) => {
     db.get("SELECT * FROM users WHERE username = ?",
     [req.body.username],
