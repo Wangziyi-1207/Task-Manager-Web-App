@@ -14,7 +14,6 @@ async function loadTasks() {
         list.appendChild(li);
     });
 }
-
 async function addTask() {
     await fetch(API, {
         method: 'POST',
