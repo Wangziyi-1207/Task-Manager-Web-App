@@ -10,7 +10,6 @@ router.get('/', auth, (req, res) => {
         res.json(rows);
     });
 });
-
 router.post('/', auth, (req, res) => {
     db.run("INSERT INTO tasks (user_id, title, status) VALUES (?, ?, 0)",
     [req.user.id, req.body.title],
